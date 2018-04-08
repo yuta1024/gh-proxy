@@ -1,0 +1,24 @@
+version: '3'
+services:
+  gh-proxy:
+    build: ./
+    network_mode: "host"
+    restart: always
+    container_name: gh-proxy
+    environment:
+      - PORT=<PORT>
+      - TOKEN=<TOKEN>
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    container_name: https-portal
+    extra_hosts:
+      - '<DOMAIN>:127.0.0.1'
+    environment:
+      DOMAINS: '<DOMAIN> -> http://<IP_ADDR>'
+      STAGE: 'production'
+    volumes:
+      - ./certs/:/var/lib/https-portal/

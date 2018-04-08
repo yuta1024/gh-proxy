@@ -1,0 +1,15 @@
+log4js:
+  appenders:
+    gh-proxy:
+      type: console
+  categories:
+    default:
+      appenders:
+        - gh-proxy
+      level: debug
+    gh-proxy:
+      appenders:
+        - gh-proxy
+      level: off
+wol:
+  token: valid_token

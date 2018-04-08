@@ -1,0 +1,33 @@
+{
+  "name": "@yuta1024/gh-proxy",
+  "version": "1.0.0",
+  "description": "Provide some functions for Google Home with IFTTT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "pretest": "eslint .",
+    "test": "NODE_ENV=test jenkins-mocha test/*"
+  },
+  "author": "Yuta Harima",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "js-yaml": "^3.11.0",
+    "log4js": "^2.5.3",
+    "wakeonlan": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-screwdriver": "^3.0.0",
+    "jenkins-mocha": "^6.0.0",
+    "mockery": "^2.1.0",
+    "sinon": "^4.5.0",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yuta1024/gh-proxy.gits"
+  }
+}
