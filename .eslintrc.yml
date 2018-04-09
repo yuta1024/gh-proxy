@@ -1,0 +1,8 @@
+extends: screwdriver
+rules:
+  max-len:
+    - error
+    - 100
+    - ignoreTemplateLiterals: true
+  new-cap:
+    - off
